@@ -1,10 +1,13 @@
 package com.tyrechangeworkshop.backend.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "customer")
+@Data
 public class Customer {
 
     @Id
