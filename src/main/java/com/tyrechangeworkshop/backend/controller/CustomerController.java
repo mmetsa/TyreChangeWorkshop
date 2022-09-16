@@ -1,4 +1,4 @@
-package com.tyrechangeworkshop.backend;
+package com.tyrechangeworkshop.backend.controller;
 
 import com.tyrechangeworkshop.backend.service.CustomerService;
 import lombok.RequiredArgsConstructor;
