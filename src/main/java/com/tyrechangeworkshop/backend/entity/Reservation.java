@@ -1,2 +1,18 @@
-package com.tyrechangeworkshop.backend.entity;public class Reservation {
+package com.tyrechangeworkshop.backend.entity;
+
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "reservation")
+@Data
+public class Reservation {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
+    private Customer customer;
 }

@@ -31,6 +31,6 @@ public class Customer {
     private String email;
 
     @OneToMany
-    @JoinColumn(name = "customer_id", referencedColumnName = "id")
-    private List<Reservation> reservations;
+    @JoinColumn(name = "reservation_id", referencedColumnName = "id")
+    private List<Reservation> reservation;
 }
