@@ -15,4 +15,7 @@ public class WorkshopTimeslot {
 
     @ManyToOne
     private Timeslot timeslot;
+
+    @OneToOne
+    private Reservation reservation;
 }

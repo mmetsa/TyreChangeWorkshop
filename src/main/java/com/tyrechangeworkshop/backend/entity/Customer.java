@@ -30,7 +30,6 @@ public class Customer {
     @Column(name = "email")
     private String email;
 
-    @OneToMany
-    @JoinColumn(name = "reservation_id", referencedColumnName = "id")
+    @OneToMany(mappedBy = "customer")
     private List<Reservation> reservation;
 }

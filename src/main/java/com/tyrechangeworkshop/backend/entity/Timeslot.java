@@ -1,6 +1,7 @@
 package com.tyrechangeworkshop.backend.entity;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -11,7 +12,12 @@ public class Timeslot {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
-    @JoinColumn(name = "timeslot_id", referencedColumnName = "id")
+    @Column(name = "start_time")
+    private LocalDateTime startTime;
+
+    @Column(name = "end_time")
+    private LocalDateTime endTime;
+
+    @OneToMany(mappedBy = "timeslot")
     private List<WorkshopTimeslot> timeslots;
 }

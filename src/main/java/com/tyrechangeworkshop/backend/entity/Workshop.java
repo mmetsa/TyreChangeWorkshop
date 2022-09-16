@@ -11,7 +11,12 @@ public class Workshop {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
-    @JoinColumn(name = "timeslot_id", referencedColumnName = "id")
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "description")
+    private String description;
+
+    @OneToMany(mappedBy = "workshop")
     private List<WorkshopTimeslot> timeslots;
 }
