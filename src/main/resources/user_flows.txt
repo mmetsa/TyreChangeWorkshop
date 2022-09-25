@@ -1,0 +1,9 @@
+== CUSTOMER FLOW #1 ==
+1. User navigates to the web page
+2. User sees a list of all the available workshops
+3. User selects their desired workshop
+4. User sees a list of all the available times for the workshop
+5. User selects a desired available time
+6. User enters their additional information
+7. User clicks "Create reservation"
+8. A reservation is made

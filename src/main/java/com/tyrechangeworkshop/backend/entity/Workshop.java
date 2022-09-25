@@ -1,10 +1,13 @@
 package com.tyrechangeworkshop.backend.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "workshop")
+@Data
 public class Workshop {
 
     @Id
@@ -16,6 +19,9 @@ public class Workshop {
 
     @Column(name = "description")
     private String description;
+
+    @Column(name = "address")
+    private String address;
 
     @OneToMany(mappedBy = "workshop")
     private List<WorkshopTimeslot> timeslots;
