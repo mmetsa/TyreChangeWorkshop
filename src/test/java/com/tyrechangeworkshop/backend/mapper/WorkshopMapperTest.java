@@ -20,7 +20,7 @@ public class WorkshopMapperTest {
     private final WorkshopMapper workshopMapper = Mappers.getMapper(WorkshopMapper.class);
 
     @Test
-    void toResponse_allFieldsSet_mapsCorrectly() {
+    void toDTO_allFieldsSet_mapsCorrectly() {
 
         // Arrange
         Workshop workshop = buildWorkshop();
@@ -36,7 +36,7 @@ public class WorkshopMapperTest {
     }
 
     @Test
-    void toListResponse_allFieldsSet_mapsCorrectly() {
+    void toDTOList_allFieldsSet_mapsCorrectly() {
 
         // Arrange
         List<Workshop> workshops = new ArrayList<>();
