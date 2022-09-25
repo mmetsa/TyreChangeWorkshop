@@ -1,8 +1,8 @@
 package com.tyrechangeworkshop.backend.mapper;
 
 
-import com.tyrechangeworkshop.backend.dto.WorkshopResponse;
 import com.tyrechangeworkshop.backend.entity.Workshop;
+import com.tyrechangeworkshop.backend.service.dto.WorkshopDTO;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 
@@ -26,13 +26,13 @@ public class WorkshopMapperTest {
         Workshop workshop = buildWorkshop();
 
         // Act
-        WorkshopResponse response = workshopMapper.toResponse(workshop);
+        WorkshopDTO workshopDTO = workshopMapper.toDTO(workshop);
 
         // Assert
-        assertEquals(workshop.getAddress(), response.getAddress());
-        assertEquals(workshop.getDescription(), response.getDescription());
-        assertEquals(workshop.getId(), response.getId());
-        assertEquals(workshop.getName(), response.getName());
+        assertEquals(workshop.getAddress(), workshopDTO.getAddress());
+        assertEquals(workshop.getDescription(), workshopDTO.getDescription());
+        assertEquals(workshop.getId(), workshopDTO.getId());
+        assertEquals(workshop.getName(), workshopDTO.getName());
     }
 
     @Test
@@ -44,7 +44,7 @@ public class WorkshopMapperTest {
         workshops.add(buildWorkshop());
 
         // Act
-        List<WorkshopResponse> response = workshopMapper.toListResponse(workshops);
+        List<WorkshopDTO> response = workshopMapper.toDTOList(workshops);
 
         // Assert
         assertEquals(response.size(), workshops.size());

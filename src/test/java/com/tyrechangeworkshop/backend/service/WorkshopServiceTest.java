@@ -1,6 +1,6 @@
 package com.tyrechangeworkshop.backend.service;
 
-import com.tyrechangeworkshop.backend.dto.WorkshopResponse;
+import com.tyrechangeworkshop.backend.controller.dto.WorkshopResponse;
 import com.tyrechangeworkshop.backend.mapper.WorkshopMapper;
 import com.tyrechangeworkshop.backend.repository.WorkshopRepository;
 import org.junit.jupiter.api.Test;

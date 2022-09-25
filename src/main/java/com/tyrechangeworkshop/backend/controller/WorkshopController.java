@@ -1,6 +1,6 @@
 package com.tyrechangeworkshop.backend.controller;
 
-import com.tyrechangeworkshop.backend.dto.WorkshopResponse;
+import com.tyrechangeworkshop.backend.controller.dto.WorkshopResponse;
 import com.tyrechangeworkshop.backend.service.WorkshopService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
 package com.tyrechangeworkshop.backend.service;
 
-import com.tyrechangeworkshop.backend.dto.WorkshopResponse;
+import com.tyrechangeworkshop.backend.controller.dto.WorkshopResponse;
 import com.tyrechangeworkshop.backend.mapper.WorkshopMapper;
 import com.tyrechangeworkshop.backend.repository.WorkshopRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,10 +18,11 @@ public class WorkshopService {
     public List<WorkshopResponse> getWorkshopsByCity(String city) {
         // If city is not specified, return all the workshops
         if (city == null) {
-            return workshopMapper.toListResponse(repository.findAll());
+            var workshopDTOs = workshopMapper.toDTOList(repository.findAll());
+            return workshopMapper.toListResponse(workshopDTOs);
         }
-
-        return workshopMapper.toListResponse(repository.findAllByAddressContainingIgnoreCase(city));
+        var workshopDTOs = workshopMapper.toDTOList(repository.findAllByAddressContainingIgnoreCase(city));
+        return workshopMapper.toListResponse(workshopDTOs);
     }
 
 }
